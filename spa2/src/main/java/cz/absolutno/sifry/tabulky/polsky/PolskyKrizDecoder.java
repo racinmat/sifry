@@ -9,11 +9,16 @@ final class PolskyKrizDecoder extends AlphabetDecoder {
     }
 
     public PolskyKrizDecoder(String var) {
-        super(27, var);
+        super(27, stripSize(var));
     }
 
     public void setVar(String var) {
-        setVar(27, var);
+        setVar(27, stripSize(var));
+    }
+
+    private static String stripSize(String var) {
+        int i = var.indexOf(':');
+        return i >= 0 ? var.substring(0, i) : var;
     }
 
     public String decode(int[] a) {

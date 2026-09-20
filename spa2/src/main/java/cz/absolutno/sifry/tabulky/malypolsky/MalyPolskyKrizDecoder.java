@@ -23,7 +23,8 @@ public final class MalyPolskyKrizDecoder extends Decoder {
 
     public MalyPolskyKrizDecoder(int var, String abcVar) {
         this.var = var;
-        abc = Alphabet.getVariantInstance(26, abcVar);
+        int i = abcVar.indexOf(':');
+        abc = Alphabet.getVariantInstance(26, i >= 0 ? abcVar.substring(0, i) : abcVar);
     }
 
     @SuppressWarnings("unused")

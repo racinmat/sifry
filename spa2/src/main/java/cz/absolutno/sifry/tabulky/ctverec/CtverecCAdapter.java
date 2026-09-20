@@ -30,7 +30,7 @@ public final class CtverecCAdapter extends TabulkyCListAdapter {
 
     @Override
     protected void setVar(int var, String abcVar) {
-        abc = Alphabet.getVariantInstance(25, abcVar);
+        abc = Alphabet.getVariantInstance(25, abcVar.substring(0, abcVar.indexOf(':')));
         notifyDataSetChanged();
     }
 

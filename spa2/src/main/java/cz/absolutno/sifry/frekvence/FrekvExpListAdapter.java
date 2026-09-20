@@ -86,7 +86,7 @@ public final class FrekvExpListAdapter extends BaseExpandableListAdapter {
     private void clear() {
         maxNum = 0;
         pismen = cislic = mezer = itp = znaku = slov = vet = souveti = nerozp = 0;
-        ruzPismen = ruzCislic;
+        ruzPismen = ruzCislic = 0;
         groupsFiltered.clear();
         for (int i = 0; i < abcCount; i++)
             pism[i] = 0;
